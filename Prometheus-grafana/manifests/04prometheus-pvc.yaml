@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prometheus-data
+  namespace: prometheus
+spec:
+# storageClassName: nfs|efs
+  accessModes:
+    - ReadWriteOnce
+#   - ReadWriteMany
+  resources:
+    requests:
+      storage: 500Gi
